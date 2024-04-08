@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=#, initial-scale=1.0">
+    <title>Supplier List</title>
+</head>
+
+<body>
+    <h1> Supplier List </h1>
+    <ul>
+        {% for supplier in suppliers %}
+        <li>
+            {{supplier.name}}- Contact Person : {{supplier.contact_person}}- Email: {{supplier.email}} </li>
+        {%endfor%}
+    </ul>
+</body>
+
+</html>
