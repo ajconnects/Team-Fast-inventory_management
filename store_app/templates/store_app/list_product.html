@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Product List 
+{% endblock %}
+
+
+{% block content %}
+    <a href="{% url 'user-page' %}"> Back </a>
+    <h1> List of Product in Store: </h1>
+
+    <table>
+        <tr>
+            <th> ID: </th>
+            <th> Product Name: </th>
+            <th> Stock: </th>
+            <th> Price: </th>
+            <th> Suppler Name: </th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td> {{ product.id }}</td>
+            <td> <a href="{% url 'product-detail' product.name %}"> {{ product.name }} </a></td>
+            <td> {{ product.stock }}</td>
+            <td> {{ product.price }}</td>
+            <td> {{ product.supplier }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock  %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+
+
+{% block content %}
+
+ <h2> Welcome Inventory Management System.</h2>
+
+ <button> <a href="{% url 'signin' %}"> Sign In</button> </a> <br><br>
+ <button> <a href="{% url 'signup' %}"> Sign Up</button> </a> <br><br>
+
+{% endblock %}

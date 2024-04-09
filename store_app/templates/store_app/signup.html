@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+ Sign Up 
+{% endblock %}
+
+{% block content %}
+<h1> Sign up form </h1>
+<p> Please fill in the details below: </p>
+<a href="{% url 'home' %}"> Back </a>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <label for="username"> Username: </label>
+    <input type="text" name="username" id="username" placeholder="It must be letter" required>  <br>
+
+    <label for="fname"> First Name: </label>
+    <input type="text" name="fname" id="fname" placeholder="Enter your first name" required>  <br>
+
+    <label for="lname"> Last Name: </label>
+    <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>  <br>
+
+    <label for="email"> Email Address: </label>
+    <input type="email" name="email" id="email" placeholder="Enter your email address" required>  <br>
+
+    <label for="password"> Password: </label>
+    <input type="password" name="pass1" id="password" placeholder="Enter Password" required>  <br>
+
+    <label for="password"> Confirm Password: </label>
+    <input type="password" name="pass2" id="password" placeholder="Enter Password" required>  <br>
+
+    <input type="submit" value="Sign Up">
+
+</form>
+
+{% endblock %}
